@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="548.0" prefWidth="753.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/15.0.1" fx:controller="calculatuscalorías.FXMLMainController">
+   <children>
+      <AnchorPane prefHeight="74.0" prefWidth="753.0" style="-fx-background-color: #0096FF;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="21.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/titulo.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="539.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/titulo2.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="41.0" layoutY="200.0" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #002060;">
+         <children>
+            <Label layoutX="38.0" layoutY="10.0" text="Género" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="41.0" layoutY="255.0" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #002060;">
+         <children>
+            <Label layoutX="45.0" layoutY="7.0" text="Edad" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="41.0" layoutY="310.0" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #002060;">
+         <children>
+            <Label layoutX="35.0" layoutY="10.0" text="Estatura" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="41.0" layoutY="365.0" prefHeight="33.0" prefWidth="120.0" style="-fx-background-color: #002060;">
+         <children>
+            <Label layoutX="26.0" layoutY="6.0" text="Peso actual" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="491.0" layoutY="109.0" prefHeight="33.0" prefWidth="236.0" style="-fx-background-color: #002060;">
+         <children>
+            <Label layoutX="14.0" layoutY="10.0" text="Nivel de actividad" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="42.0" layoutY="75.0" prefHeight="103.0" prefWidth="289.0" text="Ingresa tus datos para obtener un estimado de las calorías que requiere tu cuerpo para mantener un estado óptimo de salud:" textAlignment="JUSTIFY" wrapText="true" AnchorPane.bottomAnchor="339.0" AnchorPane.leftAnchor="42.0" AnchorPane.rightAnchor="422.0" AnchorPane.topAnchor="75.0" />
+      <ImageView fitHeight="248.0" fitWidth="69.0" layoutX="421.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/imagesSport.jpg" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="comboBoxGender" focusTraversable="false" layoutX="186.0" layoutY="204.0" prefHeight="25.0" prefWidth="160.0" />
+      <RadioButton fx:id="radioButtonLittleActivity" focusTraversable="false" layoutX="497.0" layoutY="166.0" mnemonicParsing="false" onAction="#selectRadioButtonLittleAcivity" prefHeight="17.0" prefWidth="200.0" selected="true" stylesheets="@radioButton.css" text="Poca actividad" />
+      <RadioButton fx:id="radioButtonLightExercise" focusTraversable="false" layoutX="497.0" layoutY="217.0" mnemonicParsing="false" onAction="#selectRadioButtonLightExercise" prefHeight="17.0" prefWidth="200.0" stylesheets="@radioButton.css" text="Ejercicio ligero" />
+      <RadioButton fx:id="radioButtonModerateExercise" focusTraversable="false" layoutX="497.0" layoutY="266.0" mnemonicParsing="false" onAction="#selectRadioButtonModerateExercise" prefHeight="17.0" prefWidth="200.0" stylesheets="@radioButton.css" text="Ejercicio moderado" />
+      <RadioButton fx:id="radioButtonRegularSport" focusTraversable="false" layoutX="497.0" layoutY="318.0" mnemonicParsing="false" onAction="#selectRadioButtonRegularSport" prefHeight="17.0" prefWidth="200.0" stylesheets="@radioButton.css" text="Deporte regular" />
+      <RadioButton fx:id="radioButtonEliteAthlete" focusTraversable="false" layoutX="497.0" layoutY="373.0" mnemonicParsing="false" onAction="#selectRadioButtonEliteAthlete" prefHeight="17.0" prefWidth="200.0" stylesheets="@radioButton.css" text="Deportista de élite" />
+      <JFXComboBox fx:id="comboBoxAge" focusTraversable="false" layoutX="186.0" layoutY="259.0" prefHeight="25.0" prefWidth="160.0" />
+      <JFXTextField fx:id="textFieldHeight" focusTraversable="false" layoutX="186.0" layoutY="314.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #D9D9D9;" />
+      <JFXTextField fx:id="textFieldWeight" focusTraversable="false" layoutX="186.0" layoutY="369.0" prefHeight="25.0" prefWidth="160.0" style="-fx-background-color: #D9D9D9;" />
+      <Label layoutX="354.0" layoutY="313.0" text="cm">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="369.0" text="kgs">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="buttonCalculate" focusTraversable="false" layoutX="77.0" layoutY="426.0" onAction="#calculateTMB" prefHeight="42.0" prefWidth="289.0" style="-fx-border-color: #0096FF; -fx-border-radius: 30; -fx-background-radius: 30;" text="Calcula las calorías que requieres &gt;" />
+      <Label alignment="CENTER" contentDisplay="RIGHT" layoutX="41.0" layoutY="484.0" prefHeight="50.0" prefWidth="672.0" text="* Consulta a tu médico. Esta información es una guía que pretende ser un punto de referencia, las acciones que se tomen con base en esta información son responsabilidad de quien las afectue" textAlignment="JUSTIFY" wrapText="true" />
+      <AnchorPane layoutX="503.0" layoutY="430.0" prefHeight="33.0" prefWidth="172.0" style="-fx-background-color: #0096FF;">
+         <children>
+            <Label layoutX="52.0" layoutY="3.0" text="Por día" textFill="WHITE">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="labelResult" layoutX="378.0" layoutY="435.0" prefHeight="26.0" prefWidth="110.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelHeightInvalid" layoutX="186.0" layoutY="343.0" prefHeight="17.0" prefWidth="236.0" textFill="RED" />
+      <Label fx:id="labelWeitghInvalid" layoutX="186.0" layoutY="401.0" prefHeight="17.0" prefWidth="236.0" textFill="RED" />
+   </children>
+</AnchorPane>
